@@ -1,0 +1,22 @@
+{
+  "name": "pingbuller",
+  "version": "1.0.0",
+  "description": "final task by html/css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BMaryan/FinalTask-html-css1.git"
+  },
+  "author": "Burban Maryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BMaryan/FinalTask-html-css1/issues"
+  },
+  "homepage": "https://github.com/BMaryan/FinalTask-html-css1#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
