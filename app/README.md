@@ -1,2 +1,2 @@
-# Final task by HTML/CSS
-The project is called **PINGBULLER**
+# PINGBULLER
+Final task by html/css
