@@ -1,4 +1,3 @@
-const { parallel } = require('gulp');
 const gulp = require('gulp'),
     concat = require('gulp-concat'),
     cleanCss = require('gulp-clean-css'),
@@ -44,4 +43,4 @@ function images(done) {
 }
 
 // realization of tasks
-exports.realizationOfTask = parallel(html, css, font, fontAwesome, images);
+exports.realizationOfTask = gulp.parallel(html, css, font, fontAwesome, images);
