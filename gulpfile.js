@@ -1,0 +1,47 @@
+const { parallel } = require('gulp');
+const gulp = require('gulp'),
+    concat = require('gulp-concat'),
+    cleanCss = require('gulp-clean-css'),
+    htmlmin = require('gulp-htmlmin');
+
+// html minify 
+function html(done) {
+    gulp.src('./app/*.html')
+        .pipe(concat('index.min.html'))
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(gulp.dest('./dist'))
+    done();
+}
+
+// css minify 
+function css(done) {
+    gulp.src('./app/css/*')
+        .pipe(concat('style.min.css'))
+        .pipe(cleanCss())
+        .pipe(gulp.dest('./dist/css'))
+    done();
+}
+
+// font from app to dist
+function font(done) {
+    gulp.src('./app/font/*')
+        .pipe(gulp.dest('./dist/font'))
+    done();
+}
+
+// fontAwesome from app to dist
+function fontAwesome(done) {
+    gulp.src('./app/font-awesome/font-awesome-4.7.0/css/*')
+        .pipe(gulp.dest('./dist/font-awesome/font-awesome-4.7.0/css'))
+    done();
+}
+
+// images from app to dist
+function images(done) {
+    gulp.src('./app/images/*')
+        .pipe(gulp.dest('./dist/images'))
+    done();
+}
+
+// realization of tasks
+exports.realizationOfTask = parallel(html, css, font, fontAwesome, images);
